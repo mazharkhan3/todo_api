@@ -17,7 +17,12 @@ public class User {
     private String email;
     private String password;
     private LocalDateTime createdOn;
+    private String role;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Task> tasks;
+
+    public User() {
+        this.createdOn = LocalDateTime.now();
+    }
 }
