@@ -1,0 +1,17 @@
+@baseUrl = http://localhost:8080
+
+POST {{baseUrl}}/todos
+Content-Type: application/json
+
+{
+  "title": "Learn Java",
+  "description": "Learn Java programming language",
+  "completed": false,
+  "userId": 1
+}
+
+### GET request to example server
+GET {{baseUrl}}/todos
+
+###
+
